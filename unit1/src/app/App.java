@@ -1,22 +1,31 @@
 package app;
+import java.util.Scanner;
+
 
 public class App {
     public static void main(String[] args) throws Exception {
 
-        String person1 = "Tom";
-        String verb1 = "dance";
-        System.out.println(person1 + " is a programmer who likes to " + verb1 + ".");
-        String dayOfWeek = "Monday";
-        String adjective1 = "stale";
-        String food = "grape";
-        String verb2 = "jumps";
-        String place1 = "a bridge";
-        String person2 = "Herald";
-        System.out.println("Every " + dayOfWeek + " he makes a " + adjective1 + " " + food + " for breakfast and " + verb2 + " at " + place1 + " with " + person2 + ".");
-        String adjective2 = "old";
-        String place2 = "warehouse";
-        String verb3 = "chill";
-        System.out.println("Sometimes, he goes to the " + adjective2 + " " + place2 + " with " + person2 + " so that they can " + verb3 + " together.");
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Enter any name.");
+        String name1 = input.nextLine();
+        System.out.println("Enter any food.");
+        String food = input.nextLine();
+        System.out.println("Enter another name.");
+        String name2 = input.nextLine();
+        System.out.println("Enter a noun.");
+        String noun = input.nextLine();
+        System.out.println("Enter another noun.");
+        String noun2 = input.nextLine();
+        System.out.println(name1 + "loves to make " + food + " with " + name2 + ".");
+
+
+
+
+        
+        
+
+    
 
 
 
