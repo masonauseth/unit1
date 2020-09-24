@@ -11,11 +11,15 @@ public class App {
 
         System.out.println("Enter a color");
         String color = input.nextLine();
+
         System.out.println("Enter a number");
         int number = input.nextInt();
 
-        while (true) {
-            System.out.println(color*number);
+        int count = 0;
+
+        while(count < number) {
+            System.out.println(color);
+            count = count +1;
         }
 
 
