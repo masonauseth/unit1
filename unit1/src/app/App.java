@@ -13,7 +13,39 @@ public class App {
 
         String fact2 = "elephants are the largest land animal";
 
-        int fact1n = 1;
+        String fact3 = "elephants can mourn for their dead";
+
+        String fact4 = "elephants have very thick skin";
+
+        String fact5 = "elephant tusks are actually teeth";
+
+        int fact = input.nextInt();
+
+        if(fact == 1){
+            System.out.println(fact1);
+        }
+        
+        if (fact == 2){
+            System.out.println(fact2);
+        }
+
+        if(fact == 3){
+            System.out.println(fact3);
+        }
+
+        if(fact == 4){
+            System.out.println(fact4);
+        }
+
+        if(fact == 5){
+            System.out.println(fact5);
+        }
+        if(fact > 5){
+            System.out.println("fact not found, number over 5");
+        }
+        if(fact < 1){
+            System.out.println("fact not found, number below 1");
+        }
 
         
 
