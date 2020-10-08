@@ -7,26 +7,27 @@ public class App {
 
         Scanner input = new Scanner(System.in);
 
-        int trys = 0;
-        boolean done = false;
+        System.out.println("please enter the correct number");
 
-        while(done == false){
-        System.out.println("please enter a pasward");
-        String password = input.nextLine();
-        if (trys <= 3) {
-            if (password.equals("cows")) {
-                System.out.println("Correct");
-                done = true;
-            } else {
-                trys = trys + 1;
-                System.out.println("Incorrect Pasword, your trys are " + trys + " out of 3");
-                if(trys > 3){
-                    System.out.println("Max trys reached, all data has been deleted");
-                    done = true;
-                }}
+        int done = 0;
 
+        int number = input.nextInt();
 
-            }
+        while(done == 0)
+        if (number == 30){
+            System.out.println("correct");
+            done = done +1;
         }
+        else{
+
+        if(number < 30){
+            System.out.println("low");
+        }
+
+        if(number > 30){
+            System.out.println("high");
+        }}
+    
+        
     }
 }
