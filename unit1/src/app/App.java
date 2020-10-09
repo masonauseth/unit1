@@ -16,17 +16,20 @@ public class App {
         while(done == 0)
         if (number == 30){
             System.out.println("correct");
-            done = done +1;
+            done = done + 2;
         }
         else{
 
         if(number < 30){
+            done = done + 1;
             System.out.println("low");
         }
 
         if(number > 30){
             System.out.println("high");
-        }}
+            done = done + 1;
+        }done = done - 1; 
+    }
     
         
     }
