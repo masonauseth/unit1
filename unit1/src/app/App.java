@@ -7,29 +7,22 @@ public class App {
 
         Scanner input = new Scanner(System.in);
 
-        System.out.println("please enter the correct number");
+        System.err.println("please enter a number");
 
-       int done = 1;
-
-
-        while(done < 2){
         int number = input.nextInt();
 
-        if (number == 30){
-            System.out.println("correct");
-            done = done + 2;
+        System.err.println("Please enter another bigger number");
+
+        int number2 = input.nextInt();
+
+        while(number < number2){
+        if(number % 2 == 0){
+            System.out.println(number);
         }
-        else if (number < 30){
-            System.err.println("low");
+        number ++;
 
-
-        
-            
+       
     }
-    else if (number > 30){
-        System.err.println("high");
-    }
-}
         
     }
 }
