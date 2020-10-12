@@ -9,28 +9,27 @@ public class App {
 
         System.out.println("please enter the correct number");
 
-        int done = 0;
+       int done = 1;
 
+
+        while(done < 2){
         int number = input.nextInt();
 
-        while(done == 0)
         if (number == 30){
             System.out.println("correct");
             done = done + 2;
         }
-        else{
+        else if (number < 30){
+            System.err.println("low");
 
-        if(number < 30){
-            done = done + 1;
-            System.out.println("low");
-        }
 
-        if(number > 30){
-            System.out.println("high");
-            done = done + 1;
-        }done = done - 1; 
+        
+            
     }
-    
+    else if (number > 30){
+        System.err.println("high");
+    }
+}
         
     }
 }
