@@ -7,22 +7,22 @@ public class App {
 
         Scanner input = new Scanner(System.in);
 
-        System.err.println("please enter a number");
+       System.out.println("We will be playing the Roulette wheel!");
 
-        int number = input.nextInt();
+       System.out.println("You have $100");
 
-        System.err.println("Please enter another bigger number");
+       System.out.println("Would you like to make a inside or outside bet");
 
-        int number2 = input.nextInt();
+      String bettype = input.nextLine();
 
-        while(number < number2){
-        if(number % 2 == 0){
-            System.out.println(number);
-        }
-        number ++;
+      if(bettype.equals("inside")){
+          System.out.println("what number do you want to bet on");
+          
+      }
+      else{
 
-       
-    }
+      }
+
         
     }
 }
