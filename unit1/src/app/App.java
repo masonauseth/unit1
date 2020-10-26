@@ -16,6 +16,12 @@ public class App {
 
         int red[]={1,3,5,7,9,12,14,16,18,19,21,23,25,27,30,32,34,36};
 
+        int black[]={2,4,6,8,10,11,13,15,17,20,22,24,26,28,29,31,33,35};
+
+        int even[]={2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36};
+
+        int odd[]={1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35};
+
        System.out.println("We will be playing the Roulette wheel!");
 
        System.out.println("You have $100");
@@ -46,12 +52,47 @@ public class App {
           String outsidebet = input.nextLine();
           System.out.println("You bet " + outsidebet);
           if(outsidebet.equals("red")){
-            System.out.println("You bet " + outsidebet);
+            System.out.println("You bet red");
             System.out.println("How much would you like to bet?");
             int amountbet = input.nextInt();
-            System.out.println("You bet " + amountbet + "Your money is now " + (money - amountbet));
+            System.out.println("You bet " + amountbet);
+            System.out.println("spinning...");
+            System.out.println("The spin is" + nl);
+            if(nl == red){
+                System.out.println("You won");
+                System.out.println("Your money is now" + (money + (amountbet * 36)));
+            }
           }
-      }
+            else{
+                
+            }
+        }
+            else if(outsidebet.equals("black")){
+            System.out.println("You bet black");
+            System.out.println("How much would you like to bet?");
+            int amountbet = input.nextInt();
+            System.out.println("You bet " + amountbet);
+        }
+            else if(outsidebet.equals("even")){
+            System.out.println("You bet even");
+            System.out.println("How much would you like to bet?");
+            int amountbet = input.nextInt();
+            System.out.println("You bet " + amountbet);
+        }
+            else if(outsidebet.equals("odd")){
+            System.out.println("You bet odd");
+            System.out.println("How much would you like to bet?");
+            int amountbet = input.nextInt();
+            System.out.println("You bet " + amountbet);
+        }
+          
+
+
+
+            }
+        }
+    
+      
 
       
 
