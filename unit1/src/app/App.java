@@ -14,6 +14,8 @@ public class App {
 
         int money = 100;
 
+        int amountbet = 0;
+
         int red[]={1,3,5,7,9,12,14,16,18,19,21,23,25,27,30,32,34,36};
 
         int black[]={2,4,6,8,10,11,13,15,17,20,22,24,26,28,29,31,33,35};
@@ -34,7 +36,7 @@ public class App {
           System.out.println("What number from 1 to 36 do you want to bet on?");
           int insidebet = input.nextInt();
           System.out.println("How much do you want to bet?");
-          int amountbet = input.nextInt();
+          amountbet = input.nextInt();
           System.out.println("You bet " + insidebet);
           System.out.println("Spining...");
           System.out.println("The number is " + nl);
@@ -54,54 +56,44 @@ public class App {
           if(outsidebet.equals("red")){
             System.out.println("You bet red");
             System.out.println("How much would you like to bet?");
-            int amountbet = input.nextInt();
+            amountbet = input.nextInt();
             System.out.println("You bet " + amountbet);
             System.out.println("spinning...");
             System.out.println("The spin is" + nl);
-            if(nl == red){
+            for (int i = 0; i < red.length; i++){
                 System.out.println("You won");
                 System.out.println("Your money is now" + (money + (amountbet * 36)));
             }
-          }
-            else{
                 
             }
-        }
-            else if(outsidebet.equals("black")){
-            System.out.println("You bet black");
+          }
+            else{
+                System.out.println("You lost");
+                System.out.println("Your money is now " + (money - amountbet));
+            }
+            for (int i = 0; i < black.length; i++){
+            if(nl == (black[i])){
+                System.out.println("you won");
+                System.out.println("Your money is now" + (money + (amountbet * 36)));
+            }
+            
+            }
+           
+           for (int i = 0; i < even.length; i++){
+             System.out.println("You bet even");
             System.out.println("How much would you like to bet?");
-            int amountbet = input.nextInt();
+            amountbet = input.nextInt();
             System.out.println("You bet " + amountbet);
-        }
-            else if(outsidebet.equals("even")){
-            System.out.println("You bet even");
+           }
+           
+            for (int i = 0; i < odd.length; i++){
+             System.out.println("You bet odd");
             System.out.println("How much would you like to bet?");
-            int amountbet = input.nextInt();
+            amountbet = input.nextInt();
             System.out.println("You bet " + amountbet);
-        }
-            else if(outsidebet.equals("odd")){
-            System.out.println("You bet odd");
-            System.out.println("How much would you like to bet?");
-            int amountbet = input.nextInt();
-            System.out.println("You bet " + amountbet);
+            }
+           
         }
           
 
-
-
-            }
-        }
-    
-      
-
-      
-
-
-
-     
-      
-      
-
-        
-    }
 }
