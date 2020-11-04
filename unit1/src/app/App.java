@@ -61,17 +61,21 @@ public class App {
                 System.out.println("You bet " + amountbet);
                 System.out.println("spinning...");
                 System.out.println("The spin is " + nl);
+                boolean isred = false;
                 for (int i = 0; i < red.length; i++) {
                     if (nl == (red[i])) {
                         win = true;
                     }
-                }
 
-                if (win = true) {
+                }
+                if (win == true) {
+                    isred = true;
                     System.out.println("You win");
                     System.out.println("your money is $" + (money + (amountbet * 2)));
-                } else {
-                    System.out.println("You lost");
+                }
+
+                if (isred == false) {
+                    System.out.println("you lost");
                     System.out.println("Your money is now " + (money - amountbet));
                 }
 
@@ -82,43 +86,49 @@ public class App {
                 System.out.println("You bet " + amountbet);
                 System.out.println("spinning...");
                 System.out.println("The spin is " + nl);
+                boolean isblack = false;
                 for (int i = 0; i < black.length; i++) {
                     if (nl == (black[i])) {
                         System.out.println("you won");
                         win = true;
-                        if (win = true) {
+                        if (win == true) {
+                            isblack = true;
                             System.out.println("You win");
                             System.out.println("your money is $" + (money + (amountbet * 2)));
                         }
 
-                    } else {
-                        System.out.println("You lost");
-                        System.out.println("Your money is now " + (money - amountbet));
                     }
-                }
-            }
 
-            else if (outsidebet.equals("even")) {
+                }
+                if (isblack == false) {
+                    System.out.println("you lost");
+                    System.out.println("Your money is now " + (money - amountbet));
+                }
+            } else if (outsidebet.equals("even")) {
                 System.out.println("How much would you like to bet?");
                 amountbet = input.nextInt();
                 input.nextLine();
                 System.out.println("You bet " + amountbet);
                 System.out.println("spinning...");
                 System.out.println("The spin is " + nl);
+                boolean iseven = false;
                 for (int k = 0; k < even.length; k++) {
                     if (nl == (even[k])) {
                         System.out.println("you won");
                         win = true;
-                        if (win = true) {
+                        if (win == true) {
+                            iseven = true;
                             System.out.println("You win");
                             System.out.println("your money is $" + (money + (amountbet * 2)));
                         }
 
-                    } else {
-                        System.out.println("You lost");
-                        System.out.println("Your money is now " + (money - amountbet));
                     }
                 }
+                if (iseven == false) {
+                    System.out.println("you lost");
+                    System.out.println("Your money is now " + (money - amountbet));
+                }
+
             } else if (outsidebet.equals("odd")) {
                 System.out.println("How much would you like to bet?");
                 amountbet = input.nextInt();
@@ -126,23 +136,26 @@ public class App {
                 System.out.println("You bet " + amountbet);
                 System.out.println("spinning...");
                 System.out.println("The spin is " + nl);
+                boolean isodd = false;
                 for (int p = 0; p < odd.length; p++) {
                     if (nl == (odd[p])) {
-                        System.out.println("you won");
                         win = true;
-                        if (win = true) {
+                        if (win == true) {
+                            isodd = true;
                             System.out.println("You win");
                             System.out.println("your money is $" + (money + (amountbet * 2)));
                         }
 
-                    } else {
-                        System.out.println("You lost");
-                        System.out.println("Your money is now " + (money - amountbet));
                     }
+
+                }
+                if (isodd == false) {
+                    System.out.println("you lost");
+                    System.out.println("Your money is now " + (money - amountbet));
                 }
 
             }
+
         }
     }
-
 }
